@@ -30,7 +30,7 @@ public class MainFrame extends JFrame{
         this.jlabel = new JLabel();
         this.setTitle("ImageViewer");
         this.setSize(800,600);
-        setMinimumSize(new Dimension(500,400));
+        this.setMinimumSize(new Dimension(500,400));
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         initializer();
@@ -51,10 +51,8 @@ public class MainFrame extends JFrame{
         panel.setBackground(Color.BLACK);
         this.add(panel, BorderLayout.SOUTH);
         
-        JPanel upPanel = new JPanel(new BorderLayout());
-        JLabel folderLabel = new JLabel("     " + imageLoader.getFolder());
-        folderLabel.setForeground(Color.white);
-        upPanel.add(folderLabel, BorderLayout.WEST);
+        JPanel upPanel = new JPanel();
+        upPanel.add(new JLabel("\n"));
         upPanel.setBackground(Color.black);
         this.add(upPanel, BorderLayout.NORTH);
         
