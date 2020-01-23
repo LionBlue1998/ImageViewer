@@ -74,11 +74,11 @@ public class FileImageLoader implements ImageLoader{
         };
     }
     private void setFileName(int i) {
-        fileName = files[i].getName() + " - " + files[i];
+        fileName = files[i].toString();
     }
 
+    @Override
     public String getFileName(){
         return fileName;
     }
-
 }
